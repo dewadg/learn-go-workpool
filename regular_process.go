@@ -1,6 +1,6 @@
 package main
 
-func countPrimesRegular(inputStream <-chan int) <-chan int {
+func findPrimesRegular(inputStream <-chan int) <-chan int {
 	outputStream := make(chan int, len(inputStream))
 	defer close(outputStream)
 

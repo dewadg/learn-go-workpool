@@ -4,7 +4,7 @@ import (
 	"sync"
 )
 
-func countPrimesWorkpool(inputStream <-chan int) <-chan int {
+func findPrimesWorkpool(inputStream <-chan int) <-chan int {
 	outputStream := make(chan int, len(inputStream))
 
 	wg := sync.WaitGroup{}
